@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/react-messenger/precache-manifest.004106b884b71559a4e4aa908d3616b8.js"
+  "/middle.react.praktikum.yandex/precache-manifest.84f6ca4321654fea7be7e31e95875e8b.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/react-messenger/index.html", {
+workbox.routing.registerNavigationRoute("/middle.react.praktikum.yandex/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
