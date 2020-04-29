@@ -2,7 +2,7 @@
   "name": "messenger",
   "version": "0.1.0",
   "author": "Kirill Kushpel",
-  "homepage": "https://kirillkushpel.github.io/react-messenger/",
+  "homepage": "http://kirillkushpel.github.io/middle.react.praktikum.yandex/",
   "dependencies": {
     "eslint-config-react-app": "^5.2.1",
     "eslint-plugin-react-hooks": "^3.0.0",
