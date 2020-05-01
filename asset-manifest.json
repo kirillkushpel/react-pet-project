@@ -1,13 +1,13 @@
 {
-  "main.css": "/middle.react.praktikum.yandex/static/css/main.c9218811.chunk.css",
-  "main.js": "/middle.react.praktikum.yandex/static/js/main.31e07c4d.chunk.js",
-  "main.js.map": "/middle.react.praktikum.yandex/static/js/main.31e07c4d.chunk.js.map",
-  "static/js/1.1448b488.chunk.js": "/middle.react.praktikum.yandex/static/js/1.1448b488.chunk.js",
-  "static/js/1.1448b488.chunk.js.map": "/middle.react.praktikum.yandex/static/js/1.1448b488.chunk.js.map",
-  "runtime~main.js": "/middle.react.praktikum.yandex/static/js/runtime~main.3380679d.js",
-  "runtime~main.js.map": "/middle.react.praktikum.yandex/static/js/runtime~main.3380679d.js.map",
-  "static/css/main.c9218811.chunk.css.map": "/middle.react.praktikum.yandex/static/css/main.c9218811.chunk.css.map",
-  "index.html": "/middle.react.praktikum.yandex/index.html",
-  "precache-manifest.84f6ca4321654fea7be7e31e95875e8b.js": "/middle.react.praktikum.yandex/precache-manifest.84f6ca4321654fea7be7e31e95875e8b.js",
-  "service-worker.js": "/middle.react.praktikum.yandex/service-worker.js"
+  "main.css": "/react-messenger/static/css/main.37fae003.chunk.css",
+  "main.js": "/react-messenger/static/js/main.51349908.chunk.js",
+  "main.js.map": "/react-messenger/static/js/main.51349908.chunk.js.map",
+  "static/js/1.9cef5a11.chunk.js": "/react-messenger/static/js/1.9cef5a11.chunk.js",
+  "static/js/1.9cef5a11.chunk.js.map": "/react-messenger/static/js/1.9cef5a11.chunk.js.map",
+  "runtime~main.js": "/react-messenger/static/js/runtime~main.6e6ca735.js",
+  "runtime~main.js.map": "/react-messenger/static/js/runtime~main.6e6ca735.js.map",
+  "static/css/main.37fae003.chunk.css.map": "/react-messenger/static/css/main.37fae003.chunk.css.map",
+  "index.html": "/react-messenger/index.html",
+  "precache-manifest.fe510c02fa16f54f9bd0b1a66f0cd10b.js": "/react-messenger/precache-manifest.fe510c02fa16f54f9bd0b1a66f0cd10b.js",
+  "service-worker.js": "/react-messenger/service-worker.js"
 }
