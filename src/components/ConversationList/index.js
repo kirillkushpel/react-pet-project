@@ -7,7 +7,7 @@ import './ConversationList.css';
 
 export default function ConversationList(props) {
 
-    const {sortedConversations} = props
+    const {sortedConversations, onConversationChange} = props;
 
     return (
         <div className="conversation-list">
@@ -23,7 +23,7 @@ export default function ConversationList(props) {
             <ConversationSearch/>
             {
                 sortedConversations.map(conversation =>
-                    <ConversationListItem
+                    <ConversationListItem onConversationChange={onConversationChange}
                         key={conversation.name}
                         data={conversation}
                         id={conversation.id}

@@ -4,6 +4,8 @@ import debounce from "../../utils/debounce";
 
 export default function ConversationSearch() {
 
+    // 'тоже на будущее, про query я знаю)
+
    const highlightedText = (text) => {
         if (this.query) {
             const lowText = text.toLowerCase();
