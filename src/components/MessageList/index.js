@@ -1,100 +1,16 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import Compose from '../Compose';
 import Toolbar from '../Toolbar';
 import ToolbarButton from '../ToolbarButton';
 import Message from '../Message';
 import moment from 'moment';
-import _getRandomId from "../../utils/get-randomId";
 import './MessageList.css';
 
 const MY_USER_ID = 'сталин';
 
 export default function MessageList(props) {
-    const [messages, setMessages] = useState([])
-    const {conversationsId, clickHandler} = props
 
-    // console.log(conversationsId, sortedConversations)
-
-    useEffect(() => {
-        getMessages();
-    }, [])
-
-    const getMessages = () => {
-        const tempMessages = [
-            {
-                id: 1,
-                author: 'сталин',
-                message: 'это супер-пупер длинное предложение, оно должно аккуратно перенестись и поместиться в пузырь =)',
-                messageId: _getRandomId(),
-                timestamp: new Date().getTime()
-            },
-            {
-                id: 2,
-                author: 'троцкий',
-                message: 'это первый чат',
-                messageId: _getRandomId(),
-                timestamp: new Date().getTime()
-            },
-            {
-                id: 3,
-                author: 'троцкий',
-                message: 'это супер-пупер длинное предложение, оно должно аккуратно перенестись и поместиться в пузырь =)',
-                timestamp: new Date().getTime(),
-                messageId: _getRandomId(),
-            },
-            {
-                id: 4,
-                author: 'сталин',
-                message: 'оу, вроде работает, но ты черкани еще пару строк в этот первый чат',
-                messageId: _getRandomId(),
-                timestamp: new Date().getTime()
-            },
-            {
-                id: 5,
-                author: 'сталин',
-                message: 'это супер-пупер длинное предложение, оно должно аккуратно перенестись и поместиться в пузырь =)',
-                messageId: _getRandomId(),
-                timestamp: new Date().getTime()
-            },
-            {
-                id: 6,
-                author: 'сталин',
-                message: 'оу, вроде работает, но ты черкани еще пару строк',
-                messageId: _getRandomId(),
-                timestamp: new Date().getTime()
-            },
-            {
-                id: 7,
-                author: 'троцкий',
-                message: 'это супер-пупер длинное предложение, оно должно аккуратно перенестись и поместиться в пузырь =)',
-                messageId: _getRandomId(),
-                timestamp: new Date().getTime()
-            },
-            {
-                id: 8,
-                author: 'троцкий',
-                message: 'оу, вроде работает, но ты черкани еще пару строк',
-                messageId: _getRandomId(),
-                timestamp: new Date().getTime()
-            },
-            {
-                id: 9,
-                author: 'сталин',
-                message: 'это супер-пупер длинное предложение, оно должно аккуратно перенестись и поместиться в пузырь =)',
-                messageId: _getRandomId(),
-                timestamp: new Date().getTime()
-            },
-            {
-                id: 10,
-                author: 'троцкий',
-                message: 'оу, вроде работает, но ты черкани еще пару строк',
-                messageId: _getRandomId(),
-                timestamp: new Date().getTime()
-            },
-        ];
-
-        setMessages([...messages, ...tempMessages])
-    }
+    const {messages} = props;
 
     // Работаем с сообщениями, сортируем их в группах по времени получения\отправки
 
@@ -108,7 +24,7 @@ export default function MessageList(props) {
             let current = messages[i];
             let next = messages[i + 1];
             let isMine = current.author === MY_USER_ID;
-            let messageId = current.messageId
+            let messageId = current.id
             let currentMoment = moment(current.timestamp);
             let prevBySameAuthor = false;
             let nextBySameAuthor = false;
@@ -169,9 +85,7 @@ export default function MessageList(props) {
                     <ToolbarButton key="phone" icon="ion-ios-call"/>
                 ]}
             />
-
             <div className="message-list-container">{renderMessages()}</div>
-
             <Compose rightItems={[
                 <ToolbarButton key="photo" icon="ion-ios-camera"/>,
                 <ToolbarButton key="image" icon="ion-ios-image"/>,
