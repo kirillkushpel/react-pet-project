@@ -7,7 +7,7 @@
         "last": "رضاییان"
       },
       "date": "1994-03-16T16:18:30.812Z",
-      "id": "1",
+      "id": 0,
       "picture": {
         "large": "https://randomuser.me/api/portraits/women/92.jpg",
         "medium": "https://randomuser.me/api/portraits/med/women/92.jpg",
@@ -21,7 +21,7 @@
         "last": "Herrera"
       },
       "date": "1949-11-27T18:08:06.065Z",
-      "id": "2",
+      "id": 1,
       "picture": {
         "large": "https://randomuser.me/api/portraits/men/53.jpg",
         "medium": "https://randomuser.me/api/portraits/med/men/53.jpg",
@@ -35,7 +35,7 @@
         "last": "Guillaume"
       },
       "date": "1965-03-23T01:10:31.634Z",
-      "id": "3",
+      "id": 2,
       "picture": {
         "large": "https://randomuser.me/api/portraits/men/1.jpg",
         "medium": "https://randomuser.me/api/portraits/med/men/1.jpg",
@@ -49,7 +49,7 @@
         "last": "Caballero"
       },
       "date": "1994-07-17T22:47:09.742Z",
-      "id": "4",
+      "id": 3,
       "picture": {
         "large": "https://randomuser.me/api/portraits/men/8.jpg",
         "medium": "https://randomuser.me/api/portraits/med/men/8.jpg",

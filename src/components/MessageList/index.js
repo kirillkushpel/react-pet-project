@@ -12,8 +12,6 @@ export default function MessageList(props) {
 
     const {messages} = props;
 
-    // Работаем с сообщениями, сортируем их в группах по времени получения\отправки
-
     const renderMessages = () => {
         let i = 0;
         let messageCount = messages.length;
@@ -68,7 +66,6 @@ export default function MessageList(props) {
                 />
             );
 
-            // Переход к следующему сообщению в списке
             i += 1;
         }
 

@@ -19,6 +19,8 @@ export default function Messenger() {
         getInitialMessages();
     }, []);
 
+    const allMessages = [].concat(messages1, messages2, messages3, messages4);
+
     const getConversations = () => {
         try {
             respondMockResult(conversations).then((response) => {
@@ -45,39 +47,21 @@ export default function Messenger() {
         setMessages([...messages, ...messages]);
     };
 
-    /*
-    * код ниже не очень красивый, но я не вижу иного способа. видимо неправильно понял задание, переписывать уже буду на TS на праздниках.
-    * еще не совсем понятно, как через хуки очищать стейт, кроме как пихать в него пустое значение. но я разберусь.
-    * сильно не бейте =)
-    * */
+  const onConversationChange = (id) => {
+    const currentChatMessages = allMessages.find(item => item.chatId === id).messages;
 
-    const onConversationChange = (id) => {
-        try {
-            if (id === '1') {
-                respondMockResult(messages1).then((response) => {
-                    getInitialMessages();
-                    setMessages([...messages, ...(response)]);
-                })
-            } else if (id === '2') {
-                respondMockResult(messages2).then((response) => {
-                    getInitialMessages();
-                    setMessages([...messages, ...(response)]);
-                })
-            } else if (id === '3') {
-                getInitialMessages();
-                respondMockResult(messages3).then((response) => {
-                    setMessages([...messages, ...(response)]);
-                })
-            } else if (id === '4') {
-                getInitialMessages();
-                respondMockResult(messages4).then((response) => {
-                    setMessages([...messages, ...(response)]);
-                })
-            }
-        } catch (e) {
-            throw new Error(`Unable to get messages. ${e}`);
-        }
-    };
+    if (!currentChatMessages) {
+      return;
+    }
+
+    try {
+          getInitialMessages();
+          setMessages([...messages, ...(currentChatMessages)]);
+
+    } catch (e) {
+      throw new Error(`Unable to get messages. ${e}`);
+    }
+  }
 
     return (
         <div className="messenger">
